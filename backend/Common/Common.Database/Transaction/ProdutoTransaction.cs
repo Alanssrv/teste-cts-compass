@@ -3,15 +3,27 @@ using Common.Entity;
 
 namespace Common.Database.Transaction
 {
+    /// <summary>
+    /// Classe responsável pelas transações relacionadas à entidade Produto
+    /// </summary>
     public class ProdutoTransaction : IProdutoTransaction
     {
         private readonly AppDbContext _context;
 
-        public ProdutoTransaction() {
+        /// <summary>
+        /// Construtor da classe ProdutoTransaction com a criação de instância com banco de dados
+        /// </summary>
+        public ProdutoTransaction()
+        {
             _context = new AppDbContext();
         }
 
-        public IEnumerable<Produto> GetProdutos() {
+        /// <summary>
+        /// Obtém a lista de todos os produtos do banco de dados
+        /// </summary>
+        /// <returns>Lista de produtos</returns>
+        public IEnumerable<Produto> GetProdutos()
+        {
             return _context.Produtos.ToList();
         }
     }

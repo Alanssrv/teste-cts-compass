@@ -10,10 +10,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Injeção da classe de transação de banco de dados da entidade Produto
 builder.Services.AddSingleton<IProdutoTransaction, ProdutoTransaction>();
 
 var app = builder.Build();
 
+// Configuração de permissão de rota de origem da requisição
 app.UseCors(x => x.AllowAnyOrigin().AllowAnyHeader().SetIsOriginAllowed(origin => true));
 
 // Configure the HTTP request pipeline.
