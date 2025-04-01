@@ -14,6 +14,8 @@ builder.Services.AddSingleton<IProdutoTransaction, ProdutoTransaction>();
 
 var app = builder.Build();
 
+app.UseCors(x => x.AllowAnyOrigin().AllowAnyHeader().SetIsOriginAllowed(origin => true));
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
