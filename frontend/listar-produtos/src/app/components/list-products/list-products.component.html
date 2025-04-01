@@ -1,5 +1,26 @@
-@if (this.getProductList()) {
-    {{this.getProductList() | json}}
-} @else {
-    <p>Carregando produtos</p>
-}
+<main>
+    @if (this.getProductList()) {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Preço</th>
+                    <th>Quantidade</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (item of getProductList(); track $index) {
+                    <tr>
+                        <td>{{item.id}}</td>
+                        <td>{{item.nome}}</td>
+                        <td>{{item.preco | currency:'BRL'}}</td>
+                        <td>{{item.quantidade}}</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    } @else {
+        <p>Carregando produtos ...</p>
+    }
+</main>

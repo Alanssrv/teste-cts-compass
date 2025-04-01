@@ -1,0 +1,21 @@
+:host {
+    footer {
+        padding: 20px 10%;
+        
+        background: var(--primary-008);
+        color: var(--white-001);
+        font-size: 18px;
+
+        p {
+            padding: 5px 0;
+        }
+
+        a {
+            color: var(--white-001);
+
+            &:hover {
+                color: var(--white-010);
+            }
+        }
+    }
+}

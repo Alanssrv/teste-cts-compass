@@ -1,7 +1,7 @@
 import { inject, Injectable, signal } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { IProduto } from '../components/models/product.interface';
+import { IProduto } from '../models/product.interface';
 import { Observable, tap, catchError, throwError } from 'rxjs';
 
 @Injectable({

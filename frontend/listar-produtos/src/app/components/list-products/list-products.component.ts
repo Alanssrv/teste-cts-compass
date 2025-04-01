@@ -1,10 +1,10 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { ProdutosApiService } from '../../services/produtos-api.service';
-import { JsonPipe } from '@angular/common';
+import { CurrencyPipe } from '@angular/common';
 
 @Component({
   selector: 'app-list-products',
-  imports: [JsonPipe],
+  imports: [CurrencyPipe],
   templateUrl: './list-products.component.html',
   styleUrl: './list-products.component.scss'
 })

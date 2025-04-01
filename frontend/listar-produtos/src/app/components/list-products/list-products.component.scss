@@ -1,0 +1,32 @@
+:host {
+    main {
+        padding: 40px 10%;
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            
+            th {
+                font-weight: bold;
+                background-color: var(--primary-008);
+                color: var(--white-001);
+                padding: 10px;
+            }
+            
+            td {
+                padding: 15px;
+                border: 1px solid var(--white-010);
+            }
+            
+            tr:hover {
+                background-color: var(--white-005);
+            }
+        }
+        
+        p {
+            font-size: 22px;
+            text-align: center;
+        }
+    }
+}
