@@ -1,8 +1,11 @@
 <main>
+    <!-- Validação sobre a lista de produtos, enquanto ela não tem valores é exibido o 'Carregando produtos' -->
     @if (this.getProductList()) {
+        <!-- Foi utilizada uma estrutura de tabela (table) para exibir os produtos -->
         <table class="table">
             <thead>
                 <tr>
+                    <!-- Cabeçalho da tabela de acordo com os campos do modelo produto -->
                     <th>ID</th>
                     <th>Nome</th>
                     <th>Preço</th>
@@ -10,6 +13,7 @@
                 </tr>
             </thead>
             <tbody>
+                <!-- Iteração sobre a lista de produtos, para o campo preço foi utilizado o CurrencyPipe para formatá-lo no padrão de moeda brasileiro (préfixo R$ e separador decimal a vírgula) -->
                 @for (item of getProductList(); track $index) {
                     <tr>
                         <td>{{item.id}}</td>

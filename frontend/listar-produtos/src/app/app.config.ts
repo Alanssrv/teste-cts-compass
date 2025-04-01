@@ -12,7 +12,7 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
-    provideHttpClient(),
-    { provide: LOCALE_ID, useValue: 'pt-BR' }
+    provideHttpClient(), // Modulo de configuração e uso do HttpClient
+    { provide: LOCALE_ID, useValue: 'pt-BR' } // Configuração de localização para uso do CurrencyPipe
   ]
 };

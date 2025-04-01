@@ -1,3 +1,4 @@
+// Configuração de variáveis do ambiente de desenvolvimento
 export const environment = {
-    produtoApiUrl: 'https://localhost:7257/api'
+    produtoApiUrl: 'http://localhost:5267/api'
 };

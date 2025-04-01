@@ -4,7 +4,7 @@
         
         table {
             width: 100%;
-            border-collapse: collapse;
+            border-collapse: collapse; // Configuração da tabela para que as bordas das células fiquem sobrepostas
             text-align: left;
             
             th {
@@ -19,6 +19,7 @@
                 border: 1px solid var(--white-010);
             }
             
+            // Destaque com variação de cor ao passar o mouse sobre uma linha da tabela
             tr:hover {
                 background-color: var(--white-005);
             }
