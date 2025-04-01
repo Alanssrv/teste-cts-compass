@@ -1,0 +1,5 @@
+@if (this.getProductList()) {
+    {{this.getProductList() | json}}
+} @else {
+    <p>Carregando produtos</p>
+}
